@@ -1,0 +1,263 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+::selection{
+  background-color: red;
+  color: rgb(255, 255, 255);
+}
+body{
+  background-image: linear-gradient(45deg,black,rgb(37, 36, 36),black);
+  min-height: 100vh;
+  width: 100%;
+}
+.header{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3% 6%;
+}
+.logo{
+  color:rgb(0, 0, 0);
+  background-clip: text;
+  cursor: pointer;
+  -webkit-text-stroke-width:2px;
+  -webkit-text-stroke-color: red;
+  font-size: 1.4rem;
+  letter-spacing: 10px;
+  text-shadow: 10px 10px 15px red;
+}
+
+.navbar ul li{
+  display: inline-block;
+  padding: 30px;
+  list-style: none;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: white;
+}
+.navbar ul li a::after{
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: white;
+  bottom: 0;
+  display: block;
+  margin:auto;
+  transition: 0.5s;
+}
+.navbar ul li a:hover::after{
+  width: 100%;
+}
+.navbar ul li a:hover{
+  text-shadow: 10px 10px 15px red;
+  color: red; 
+}
+.subscription{
+  min-height: 75vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin:4% 3%;
+  padding: 3% 2%;
+  justify-content: space-between;
+}
+.subscription h2{
+  font-size: 1.5rem;
+  width: 100%;
+  color: white;
+  letter-spacing: 10px;
+  margin-bottom: 40px;
+}
+.subscription h2 span{
+  color: red;
+  text-shadow: 0px 0px 15px red;
+  border: 2px solid red;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px red;
+  padding: 10px;
+}
+
+.subscription .form label{
+  color: rgb(135, 131, 131);
+}
+.subscription .form .box{
+  border: 1px solid red;
+  box-shadow: 0px 0px 5px red;
+  background-color: transparent;
+  border-radius: 30px;
+  width: 180%;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: red;
+  outline:none;
+}
+.submit{
+  color:white;
+  border: 1px solid red;
+  box-shadow: 0px 0px 5px red;
+  background-color: transparent;
+  border-radius: 30px;
+  width: 180%;
+  padding: 10px;
+  margin-bottom: 20px;
+  outline:none;
+  background-image: linear-gradient(45deg,black,red,black,red,black);
+  
+}
+.submit:hover{
+  background-image: linear-gradient(45deg,red,black,red,black,red,black,red,black);
+}
+
+.right{
+  margin-right: 30px;
+  text-align: center;
+  
+}
+.right h1{
+  font-size: 20px;
+  color: white;
+  letter-spacing: 15px;
+  margin-bottom: 10%;
+}
+.right a{
+  text-decoration: none;
+  color: red;
+  border: 2px solid red;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px red;
+  padding: 10px;
+}
+.right a:hover{
+  color: white;
+  border: 2px solid rgb(58, 60, 181);
+  box-shadow: 0px 0px 15px rgb(58, 60, 181);
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+.footer .exp{
+  text-align: center;
+  color: rgb(138, 133, 133);
+}
+.footer .exp p{
+  margin-bottom: 10px;
+}
+.footer .exp h3{
+  letter-spacing: 5px;
+  color: white;
+}
+
+
+
+
+
+/* -----------Code for Responsiveness--------- */
+@media screen and (max-width:1300px){
+  .right h1{
+    font-size: 20px;
+  color: white;
+  letter-spacing: 15px;
+  margin-bottom: 10%;
+}
+.right a{
+  text-decoration: none;
+  color: red;
+  border: 2px solid red;
+  box-shadow: 0px 0px 10px red;
+  padding: 10px;
+}
+
+
+}
+
+
+
+@media screen and (max-width:1150px) {
+  .logo{
+    font-size:1.2rem;
+  }
+  .navbar ul li a{
+    font-size: 10px;
+  }
+  .navbar ul li a{
+    display: inline-block;
+  }
+  .subscription .form .box{
+  width: 100%;
+}
+.submit{
+  width: 100%;
+}
+.right h1{
+  font-size: 10px;
+  color: white;
+  letter-spacing: 15px;
+  margin-bottom: 10%;
+}
+
+}
+
+  
+@media screen and (max-width:850px) {
+
+
+  .header{
+    position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10% 6%;
+  }
+  .navbar{
+    margin-top:50px;
+  }
+  .navbar ul li{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  list-style: none;
+}
+.navbar ul li a:hover{
+  text-shadow: 10px 10px 15px red;
+  color: red; 
+}
+.subscription{
+  display: flex;
+  flex-direction: column;
+  margin:0% 3%;
+}
+.right{
+  margin: 50px 0px;
+}
+
+
+}
+@media screen and (max-width:450px){
+
+  .navbar ul li{
+    padding:10px;
+  }
+  .right h1{
+  font-size: 10px;
+  color: white;
+  letter-spacing: 10px;
+  margin-bottom: 10%;
+}
+.footer .exp h3{
+  font-size: 15px;
+}
+.footer .exp p{
+  font-size: 10px;
+}
+
+}
